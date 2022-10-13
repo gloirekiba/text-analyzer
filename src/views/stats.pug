@@ -1,13 +1,27 @@
 include layout.pug 
 
-//- display the stats
-
 .container
   .row
+  .col-12
+    a.btn.btn-primary.mt-5(href='/') Back
+    
+  h2.mt-3 Stats
+  .row
     .col-12
-      table.table.table-striped.table.mt-5
+      table.table.table-striped.mt-3
         tbody
-          each stat in stats
-            tr
-              td= stat.name
-              td= stat.value
+        each stat in stats
+          tr
+            td= stat.name
+            td= stat.value
+
+  h2.mt-5 Word repetition
+  .row
+    .col-12
+      table.table.table-striped.mt-3
+        tbody
+        each count, word in words
+          tr
+            td= word
+            td= count
+
