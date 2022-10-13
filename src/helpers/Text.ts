@@ -24,4 +24,27 @@ export default class Text {
   static totalCharactersNoSpaces(text: string): number {
     return text.replace(/\s/g, "").length;
   }
+
+  static totalSentences(text: string): number {
+    const regex = /[.?!]+/g;
+    const sentences = text.match(regex);
+    return sentences ? sentences.length : 0;
+  }
+
+  // word repetition
+
+  static wordRepetition(text: string): { [key: string]: number } {
+    const regex = /[a-z0-9]+/gi;
+    const words = text.match(regex);
+    if (!words) return {};
+    const counts: { [key: string]: number } = {};
+    words.forEach((word) => {
+      if (counts[word]) {
+        counts[word]++;
+      } else {
+        counts[word] = 1;
+      }
+    });
+    return counts;
+  }
 }
