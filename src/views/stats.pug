@@ -1,3 +1,13 @@
 include layout.pug 
 
-h1 Text statistics
+//- display the stats
+
+.container
+  .row
+    .col-12
+      table.table.table-striped.table.mt-5
+        tbody
+          each stat in stats
+            tr
+              td= stat.name
+              td= stat.value
