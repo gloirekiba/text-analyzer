@@ -47,4 +47,24 @@ export default class Text {
     });
     return counts;
   }
+
+  static shortestWord(text: string): string {
+    const regex = /[a-z0-9]+/gi;
+    const words = text.match(regex);
+    if (!words) return "";
+    const shortest = words.reduce((acc, word) =>
+      word.length < acc.length ? word : acc
+    );
+    return `${shortest} (${shortest.length})`;
+  }
+
+  static longestWord(text: string): string {
+    const regex = /[a-z0-9]+/gi;
+    const words = text.match(regex);
+    if (!words) return "";
+    const longest = words.reduce((acc, word) =>
+      word.length > acc.length ? word : acc
+    );
+    return `${longest} (${longest.length})`;
+  }
 }
