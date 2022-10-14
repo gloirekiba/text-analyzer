@@ -1,6 +1,8 @@
 import Text from "./Text";
 
-export function getTextStats(text: string): { name: string; value: number }[] {
+export function getTextStats(
+  text: string
+): { name: string; value: number | string }[] {
   return [
     { name: "Total Words", value: Text.totalWordsClean(text) },
     { name: "Unique Words", value: Text.uniqueWordsClean(text) },
@@ -11,5 +13,7 @@ export function getTextStats(text: string): { name: string; value: number }[] {
       value: text.replace(/\s/g, "").length,
     },
     { name: "Total Sentences", value: Text.totalSentences(text) },
+    { name: "Shortest Word", value: Text.shortestWord(text) },
+    { name: "Longest Word", value: Text.longestWord(text) },
   ];
 }
