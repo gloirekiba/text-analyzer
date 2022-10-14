@@ -3,7 +3,6 @@ block content
   .container
     .row
       .col-12
-        form(action="/stats" method="post")
-          .form-group(class="mt-5")
-            textarea(class="form-control" name="text", cols="30", rows="10")
-            button(class="btn btn-primary mt-3") Submit
+        h1.mt-5 Welcome to the Text Analysis
+        p This is a simple text analyzer that will give you some basic statistics about your text.
+        a.btn.btn-primary(href='/stats') Go to stats
