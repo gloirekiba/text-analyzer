@@ -13,12 +13,12 @@ export default class Text {
     return words ? new Set(words).size : 0;
   }
 
-  static averageWordLength(text: string): number {
+  static averageWordLength(text: string): string | number {
     const regex = /[a-z0-9]+/gi;
     const words = text.match(regex);
     if (!words) return 0;
     const total = words.reduce((acc, word) => acc + word.length, 0);
-    return total / words.length;
+    return (total / words.length).toFixed(2);
   }
 
   static totalCharactersNoSpaces(text: string): number {
