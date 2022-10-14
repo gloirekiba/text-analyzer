@@ -1,27 +1,35 @@
-include layout.pug 
+extends layout.pug
 
-.container
-  .row
-  .col-12
-    a.btn.btn-primary.mt-5(href='/') Back
-    
-  h2.mt-3 Stats
-  .row
-    .col-12
-      table.table.table-striped.mt-3
-        tbody
-        each stat in stats
-          tr
-            td= stat.name
-            td= stat.value
+block scripts
+  script(src="js/stats.js" defer) 
 
-  h2.mt-5 Word repetition
-  .row
-    .col-12
-      table.table.table-striped.mt-3
-        tbody
-        each count, word in words
-          tr
-            td= word
-            td= count
+block content
+  .container
+    .row
+      .col-12
+        a.btn.btn-primary.mt-5(href='/') Back
+        
+    h2.mt-3 Stats
+    .row
+      .col-12
+        table.table.table-striped.mt-3
+          tbody
+          each stat in stats
+            tr
+              td= stat.name
+              td= stat.value
 
+    h2.mt-5 Word repetition
+    .row
+      .col-12
+        input.form-control(type="text" placeholder="Filter" id="filter")
+    .row
+      .col-12
+        table.table.table-striped.mt-3(id="list-repetition")
+          tbody
+          each count, word in words
+            tr
+              td= word
+              td= count
+
+    a.btn.btn-primary.mb-5(href='#') Return on top
