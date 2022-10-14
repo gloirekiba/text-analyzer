@@ -1,7 +1,7 @@
 import express, { Request, Response, Router } from "express";
 
 import Text from "../helpers/Text";
-import getStats from "../helpers/stats";
+import { getTextStats } from "../helpers/helpers";
 
 const router: Router = express.Router();
 
@@ -11,7 +11,7 @@ router.get("/", (req: Request, res: Response) => {
 
 router.post("/stats", (req: Request, res: Response) => {
   const text = req.body.text as string;
-  const stats = getStats(text);
+  const stats = getTextStats(text);
   const words = Text.wordRepetition(text);
 
   res.render("stats", { title: "Express", stats, words });
