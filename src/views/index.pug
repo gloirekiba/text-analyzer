@@ -1,9 +1,10 @@
 extends layout.pug
+
 block content
   .container
     .row
       .col-12
-        h1.mt-5 Welcome to the Text Analyzer
+        h1.mt-5 Welcome to the #{title}!
         p This is a simple text analyzer that will give you some basic statistics about your text.
         .btn-group
           a.btn.btn-primary(href='/stats') Go to stats
