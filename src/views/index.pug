@@ -1,8 +1,9 @@
-include layout.pug
-.container
-  .row
-    .col-12
-      form(action="/" method="post")
-        .form-group(class="mt-5")
-          textarea(class="form-control" name="text", cols="30", rows="10")
-          button(class="btn btn-primary mt-3") Submit
+extends layout.pug
+block content
+  .container
+    .row
+      .col-12
+        form(action="/stats" method="post")
+          .form-group(class="mt-5")
+            textarea(class="form-control" name="text", cols="30", rows="10")
+            button(class="btn btn-primary mt-3") Submit
