@@ -9,7 +9,7 @@ router.get("/", (req: Request, res: Response) => {
   res.render("index", { title: "Express" });
 });
 
-router.post("/", (req: Request, res: Response) => {
+router.post("/stats", (req: Request, res: Response) => {
   const text = req.body.text as string;
   const stats = getStats(text);
   const words = Text.wordRepetition(text);
