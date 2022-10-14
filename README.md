@@ -1,4 +1,4 @@
-# Text analyzer
+# Text analysis
 
 Text analyzer is a program that analyzes text files and returns the number of words, sentences, and paragraphs in the text. It also returns the number of times each word appears in the text.
 
