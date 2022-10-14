@@ -6,9 +6,10 @@ Text analyzer is a program that analyzes text files and returns the number of wo
 
 1. Clone the repository
 2. Open the terminal and navigate to the folder where the repository is located
-3. In **development** mode run the command `npm run dev`
-4. In **production** mode run the command `npm run build` and then `npm start`
-5. Open the browser and go to `http://localhost:3000`
+3. Run `npm install`
+4. In **development** mode run the command `npm run dev`
+5. In **production** mode run the command `npm run build` and then `npm start`
+6. Open the browser and go to `http://localhost:3000`
 ## How to contribute
 
 1. Fork the repository
