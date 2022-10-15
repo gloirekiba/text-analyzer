@@ -4,12 +4,20 @@ Text analyzer is a program that analyzes text files and returns the number of wo
 
 ## How to run 
 
-1. Clone the repository
-2. Open the terminal and navigate to the folder where the repository is located
-3. Run `npm install`
-4. In **development** mode run the command `npm run dev`
-5. In **production** mode run the command `npm run build` and then `npm start`
-6. Open the browser and go to `http://localhost:3000`
+###### Development
+```bash
+$ cd text-analyzer
+$ npm install
+$ npm run dev
+```
+###### Production
+```bash
+$ cd text-analyzer
+$ npm install
+$ npm run build
+$ npm run start
+```
+
 ## How to contribute
 
 1. Fork the repository
