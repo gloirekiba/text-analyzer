@@ -15,5 +15,6 @@ export function getTextStats(
     { name: "Total Sentences", value: Text.totalSentences(text) },
     { name: "Shortest Word", value: Text.shortestWord(text) },
     { name: "Longest Word", value: Text.longestWord(text) },
+    { name: "Size", value: Text.size(text) },
   ];
 }
