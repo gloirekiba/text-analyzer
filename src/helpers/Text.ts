@@ -1,3 +1,5 @@
+import { Blob } from "buffer";
+
 export default class Text {
   // remove punctuation, and split on whitespace
 
@@ -66,5 +68,16 @@ export default class Text {
       word.length > acc.length ? word : acc
     );
     return `${longest} (${longest.length})`;
+  }
+
+  static size(text: string): string {
+    let bytes = new Blob([text]).size;
+    const units = ["B", "KB", "MB", "GB", "TB"];
+    let unit = 0;
+    while (bytes > 1024) {
+      bytes /= 1024;
+      unit++;
+    }
+    return `${bytes.toFixed(2)} ${units[unit]}`;
   }
 }
