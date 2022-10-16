@@ -11,19 +11,17 @@ block content
           textarea(class="form-control" name="text", cols="30", rows="10")
           button(class="btn btn-primary mt-3") Submit
     else
-      .row
-        .col-12
-          a.btn.btn-primary.mt-5(href='/stats') Back
+      a.btn.btn-primary.mt-5(href='/stats') Back
           
       h2.mt-3 Stats
       .row
         .col-12
           table.table.table-striped.mt-3
             tbody
-            each stat in stats
-              tr
-                td= stat.name
-                td= stat.value
+              each stat in stats
+                tr
+                  td= stat.name
+                  td= stat.value
 
       h2.mt-5 Word repetition
       .row
@@ -33,9 +31,9 @@ block content
         .col-12
           table.table.table-striped.mt-3(id="list-repetition")
             tbody
-            each count, word in words
-              tr
-                td= word
-                td= count
+              each count, word in words
+                tr
+                  td= word
+                  td= count
 
       a.btn.btn-primary.mb-5(href='#') Return on top
